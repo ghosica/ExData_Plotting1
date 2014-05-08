@@ -13,7 +13,7 @@ data$datetime<-as.POSIXct(paste(data$Date, data$Time), format="%Y-%m-%d %H:%M:%S
 
 ##plot3
 png("plot3.png")
-with(data,{ plot(datetime,Sub_metering_1, type="l",xlab="",ylab="Energy sub metering")
+with(data,{ plot(datetime,Sub_metering_1, bg="transparent", type="l",xlab="",ylab="Energy sub metering")
             lines(datetime,Sub_metering_2,col="red", type="l")
             lines(datetime,Sub_metering_3,col="blue", type="l")
 })
