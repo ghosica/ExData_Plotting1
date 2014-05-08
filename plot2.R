@@ -13,5 +13,5 @@ data$datetime<-as.POSIXct(paste(data$Date, data$Time), format="%Y-%m-%d %H:%M:%S
 
 ##plot2
 png("plot2.png")
-plot(data$datetime,data$Global_active_power, type="l",xlab="",ylab="Global Active Power (kilowatts)")
+plot(data$datetime,data$Global_active_power, bg="transparent", type="l",xlab="",ylab="Global Active Power (kilowatts)")
 dev.off()
