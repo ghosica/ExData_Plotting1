@@ -15,16 +15,16 @@ data$datetime<-as.POSIXct(paste(data$Date, data$Time), format="%Y-%m-%d %H:%M:%S
 png("plot4.png")
 par(mfrow=c(2,2))
 with(data, {
-        plot(datetime,Global_active_power, type="l",xlab="",ylab="Global Active Power")
+        plot(datetime,Global_active_power, bg="transparent", type="l",xlab="",ylab="Global Active Power")
         
-        plot(datetime,Voltage, type="l",ylab="Voltage")
+        plot(datetime,Voltage, bg="transparent", type="l",ylab="Voltage")
         
-        plot(datetime,Sub_metering_1, type="l",xlab="",ylab="Energy sub metering")
+        plot(datetime,Sub_metering_1, bg="transparent", type="l",xlab="",ylab="Energy sub metering")
         legend("topright",lwd=c(2.5,2.5), col=c("black","red","blue"),bty="n", cex=0.9, legend=colnames(data[7:9]))
         lines(datetime,Sub_metering_2,col="red", type="l")
         lines(datetime,Sub_metering_3,col="blue", type="l")
         
-        plot(datetime,Global_reactive_power, type="l",ylim=c(0.0,0.5))
+        plot(datetime,Global_reactive_power, bg="transparent", type="l",ylim=c(0.0,0.5))
         
 })
 dev.off()
